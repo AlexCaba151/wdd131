@@ -1,70 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "nunito", sans-serif;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-    height: 100vh;
-  }
-  
-  /* Header */
-  header {
-    background-color: #333;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #1a4a6e;
     color: white;
-  }
-  
-  .header-content {
-    padding: 1rem;
+    padding: 20px;
     text-align: center;
-    background-color: #555;
-  }
-  
-  nav {
-    background-color: black;
-  }
-  
-  .navigation {
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header span {
+    color: #ffd700;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navigation li {
-    margin: 0 1rem;
-  }
-  
-  .navigation a {
-    text-decoration: none;
+    gap: 50px;
+}
+
+nav a {
     color: white;
-    font-weight: bold;
-  }
-  
-  /* Main Content */
-  main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .main-content {
-    background-color: #ccc;
-    padding: 1rem;
-  }
-  
-  aside {
-    background-color: #eee;
-    padding: 1rem;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
+    text-decoration: none;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+   border: 1px solid #979696;
+}
+
+.card h2 {
+    background-color: #1a4a6e;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.profile-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-text {
+    flex: 2;
+
+}
+.profile-text h3{
+    text-align: center;
+
+}
+.profile-image {
+    flex: 1;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.flag-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.flag {
+    width: 150px;
+}
+
+.card ul {
+    list-style:circle;
+}
+
+.card li {
+    margin: 10px 0;
+}
+
+.card a {
+    color: blue;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1a4a6e;
     color: white;
     text-align: center;
-    padding: 1rem;
-  }
-  
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer span {
+    color: #ffd700;
+}
