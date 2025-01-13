@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131: Dynamic Web Fundamentals</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -16,10 +17,10 @@
 
     <nav>
         <ul>
-            <li><a href="https://www.linkedin.com/in/yerlin-alec21/">LinkedIn</a></li>
-            <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/50?lang=eng&id=p4#p4">Scripture</a></li>
-            <li><a href="#">Final Project</a></li>
+            <li><a href="https://www.linkedin.com/in/yerlin-alec21/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/50?lang=eng&id=p4#p4" target="_blank">Scripture</a></li>
+            <li><a href="#" target="_blank">Final Project</a></li>
         </ul>
     </nav>
 
@@ -58,8 +59,8 @@
     </main>
 
     <footer>
-        <p>©2025 <span>🧔‍♂️ Yerlin Alexander Rodriguez 🧔‍♂️ Santo Domingo</span></p>
-        <p>Last Modification: 01/09/2025 12:13:33</p>
+        <p>©<span id="currentYear"></span> 🧔‍♂️Yerlin Alexander Rodriguez 🧔‍♂️Santo Domingo</p>
+        <p>Last Modification:<span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
