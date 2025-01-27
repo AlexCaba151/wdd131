@@ -1,0 +1,85 @@
+:root {
+    --color-primary: #ce1126; /* Madagascar flag red */
+    --color-secondary: #007e3a; /* Madagascar flag green */
+    --color-text: #333333;
+    --color-background: #ffffff;
+    --font-main: "Arial", sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header::after {
+    content: "";
+    display: block;
+    height: 0.5rem;
+    background-color: var(--color-secondary);
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .data-card,
+  .weather-card {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .data-card h2,
+  .weather-card h2 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  .weather-card h2::after {
+    content: "⛅";
+    margin-left: 0.5rem;
+  }
+  
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+  }
+  
+  dt {
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  

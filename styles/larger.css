@@ -1,0 +1,17 @@
+@media screen and (min-width: 640px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  
+    .hero {
+      grid-column: 1 / -1;
+    }
+  
+    .weather-card h2::after {
+      content: "🌤️";
+    }
+  }
+  
+  
