@@ -11,6 +11,7 @@
   
     .weather-card h2::after {
       content: "🌤️";
+      display: none;
     }
   }
   

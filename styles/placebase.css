@@ -54,21 +54,24 @@ main {
   border-radius: 8px;
   position: absolute; 
   z-index: 1; 
+  width: 450px;
 }
 .data-card {
-  top: 20%;
-  left: 10%;
+  top: 10%;
+  left: 5%;
 }
 
 .weather-card {
-  top: 20%;
-  right: 10%;
+  top: 10%;
+  right: 5%;
 }
 
 .data-card h2,
 .weather-card h2 {
   color: var(--color-secondary);
   margin-bottom: 1rem;
+  text-align: center;
+
 }
 
 .weather-card h2::after {
