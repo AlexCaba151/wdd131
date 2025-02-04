@@ -129,7 +129,6 @@ function createTempleCard(filteredTemples) {
   });
 }
 
-
 createTempleCard(temples);
 
 

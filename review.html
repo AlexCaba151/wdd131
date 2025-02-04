@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main>
+        <h1>Thank You for Your Review!</h1>
+        <div id="review-count" class="review-count">
+            Total Reviews Submitted: <span id="count">0</span>
+        </div>
+        <a href="form.html" class="submit-btn" style="display: block; text-align: center; text-decoration: none; margin-top: 2rem;">
+            Submit Another Review
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Yerlin A. Rodriguez | Last Modified: <span id="lastModified"></span></p>
+        <p>WDD 330 - Web Frontend Development II</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get current count from localStorage
+            let reviewCount = parseInt(localStorage.getItem('reviewCount') || '0');
+            
+            // Increment the count
+            reviewCount++;
+            
+            // Save back to localStorage
+            localStorage.setItem('reviewCount', reviewCount.toString());
+            
+            // Update the display
+            document.getElementById('count').textContent = reviewCount;
+        });
+
+          // Copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Last modified date
+        document.getElementById('lastModified').textContent = document.lastModified;
+
+    </script>
+</body>
+</html>
+
