@@ -2,6 +2,7 @@ const products = [
     { id: 1, name: "apple iphone 14" },
     { id: 2, name: "samsung galaxy s23" },
     { id: 3, name: "google pixel 7" },
+    { id: 4, name: "apple Iphone 15"},
   ]
   
   document.addEventListener("DOMContentLoaded", () => {
