@@ -1,0 +1,75 @@
+/* styles.css */
+
+/* Color Schema */
+:root {
+    --primary-color: #3498db; /* Sky Blue */
+    --secondary-color: #f39c12; /* Orange */
+    --text-color: #2c3e50; /* Dark Blue */
+    --background-color: #ecf0f1; /* Light Gray */
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Layout */
+section {
+    margin-bottom: 30px;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 20px;
+    list-style: none;
+}
+
+/* Wireframe images */
+.wireframe {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--text-color);
+    margin-top: 10px;
+}
+
+/* Color Schema Display */
+.color-sample {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid var(--text-color);
+}
+
+.primary-color { background-color: var(--primary-color); }
+.secondary-color { background-color: var(--secondary-color); }
+.text-color { background-color: var(--text-color); }
+.background-color { background-color: var(--background-color); }
+
+/* Typography Display */
+.font-sample {
+    margin-bottom: 10px;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
