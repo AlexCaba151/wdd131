@@ -1,0 +1,191 @@
+const destinations = [
+  {
+    id: 1,
+    name: "Paris",
+    country: "France",
+    description: "The City of Light, known for its iconic Eiffel Tower and world-class cuisine.",
+    image: "images/paris.jpg",
+  },
+  {
+    id: 2,
+    name: "Rome",
+    country: "Italy",
+    description: "The Eternal City, home to the Colosseum, Vatican City, and rich history.",
+    image: "images/rome.jpg",
+  },
+  {
+    id: 3,
+    name: "Bali",
+    country: "Indonesia",
+    description: "A tropical paradise with stunning beaches, temples, and vibrant culture.",
+    image: "images/bali.jpg",
+  },
+  {
+    id: 4,
+    name: "Tokyo",
+    country: "Japan",
+    description: "A futuristic city blending ancient traditions with cutting-edge technology.",
+    image: "images/japan.jpg",
+  },
+  {
+    id: 5,
+    name: "New York City",
+    country: "USA",
+    description: "The city that never sleeps, famous for Times Square, Broadway, and Central Park.",
+    image: "images/nyc.jpg",
+  },
+  {
+    id: 6,
+    name: "Dubai",
+    country: "UAE",
+    description: "A luxury metropolis known for the Burj Khalifa, shopping, and desert adventures.",
+    image: "images/dubai.jpg",
+  },
+  {
+    id: 7,
+    name: "London",
+    country: "England",
+    description: "A historic capital with Buckingham Palace, Big Ben, and world-class museums.",
+    image: "images/london.jpg",
+  },
+  {
+    id: 8,
+    name: "Santorini",
+    country: "Greece",
+    description: "Famous for its white-washed buildings, blue domes, and breathtaking sunsets.",
+    image: "images/santorini.jpg",
+  },
+  {
+    id: 9,
+    name: "Bangkok",
+    country: "Thailand",
+    description: "A bustling city known for golden temples, street food, and lively markets.",
+    image: "images/bangkok.jpg",
+  },
+  {
+    id: 10,
+    name: "Barcelona",
+    country: "Spain",
+    description: "A vibrant city with Gaudí’s architecture, stunning beaches, and rich culture.",
+    image: "images/barcelona.jpg",
+  },
+  {
+    id: 11,
+    name: "Cairo",
+    country: "Egypt",
+    description: "Home to the Pyramids of Giza and the Sphinx, showcasing ancient history.",
+    image: "images/cairo.jpg",
+  },
+  {
+    id: 12,
+    name: "Sydney",
+    country: "Australia",
+    description: "Famous for the Sydney Opera House, Bondi Beach, and a stunning harbor.",
+    image: "images/sydney.jpg",
+  },
+  {
+    id: 13,
+    name: "Istanbul",
+    country: "Turkey",
+    description: "A unique city blending European and Asian cultures, with Hagia Sophia and bazaars.",
+    image: "images/istanbul.jpg",
+  },
+  {
+    id: 14,
+    name: "Machu Picchu",
+    country: "Peru",
+    description: "An ancient Incan city in the Andes, offering breathtaking views and history.",
+    image: "images/machu_picchu.jpg",
+  },
+  {
+    id: 15,
+    name: "Rio de Janeiro",
+    country: "Brazil",
+    description: "Famous for Christ the Redeemer, Copacabana Beach, and the vibrant Carnival.",
+    image: "images/rio.jpg",
+  },
+  {
+    id: 16,
+    name: "Kyoto",
+    country: "Japan",
+    description: "A city full of temples, cherry blossoms, and traditional tea houses.",
+    image: "images/kyoto.jpg",
+  },
+  {
+    id: 17,
+    name: "Venice",
+    country: "Italy",
+    description: "The romantic city of canals, gondolas, and breathtaking architecture.",
+    image: "images/venice.jpg",
+  },
+  {
+    id: 18,
+    name: "Amsterdam",
+    country: "Netherlands",
+    description: "Known for its canals, museums, and vibrant cycling culture.",
+    image: "images/amsterdam.jpg",
+  },
+  {
+    id: 19,
+    name: "Great Wall of China",
+    country: "China",
+    description: "A historic marvel stretching across the country, offering incredible views.",
+    image: "images/great_wall.jpg",
+  },
+  {
+    id: 20,
+    name: "The Maldives",
+    country: "Maldives",
+    description: "A dream destination with overwater bungalows and crystal-clear waters.",
+    image: "images/maldives.jpg",
+  },
+    // Add more destinations here
+  ]
+  
+  const renderFavorites = () => {
+    const favoritesGrid = document.getElementById("favorites-grid")
+    favoritesGrid.innerHTML = ""
+  
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || []
+    const favoriteDestinations = destinations.filter((dest) => favorites.includes(dest.id))
+  
+    if (favoriteDestinations.length === 0) {
+      favoritesGrid.innerHTML = "<p>You have no favorite destinations yet.</p>"
+      return
+    }
+  
+    favoriteDestinations.forEach((destination) => {
+      const card = document.createElement("div")
+      card.classList.add("destination-card")
+      card.innerHTML = `
+              <img data-src="${destination.image}" alt="${destination.name}" loading="lazy">
+              <div class="destination-card-content">
+                  <h3>${destination.name}, ${destination.country}</h3>
+                  <p>${destination.description}</p>
+                  <button class="btn remove-favorite-btn" data-id="${destination.id}">Remove from Favorites</button>
+              </div>
+          `
+      favoritesGrid.appendChild(card)
+    })
+  }
+  
+  const removeFavorite = (id) => {
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || []
+    favorites = favorites.filter((favId) => favId !== id)
+    localStorage.setItem("favorites", JSON.stringify(favorites))
+    renderFavorites()
+  }
+  
+  const handleRemoveFavorite = (event) => {
+    if (event.target.classList.contains("remove-favorite-btn")) {
+      const id = Number.parseInt(event.target.dataset.id)
+      removeFavorite(id)
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    renderFavorites()
+    document.getElementById("favorites-grid").addEventListener("click", handleRemoveFavorite)
+  })
+  
+  
