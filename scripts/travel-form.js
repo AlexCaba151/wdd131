@@ -65,4 +65,25 @@ document.querySelectorAll('input, select, textarea').forEach(element => {
   // Last modified date
   document.getElementById('lastModified').textContent = document.lastModified;
   
+  document.addEventListener('DOMContentLoaded', () => {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('nav ul');
   
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navMenu.classList.toggle('show');
+    });
+  
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('nav') && navMenu.classList.contains('show')) {
+        burgerMenu.classList.remove('active');
+        navMenu.classList.remove('show');
+      }
+    });
+  
+    // Prevent clicks inside the menu from closing it
+    navMenu.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  });

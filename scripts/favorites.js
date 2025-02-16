@@ -188,4 +188,3 @@ const destinations = [
     document.getElementById("favorites-grid").addEventListener("click", handleRemoveFavorite)
   })
   
-  

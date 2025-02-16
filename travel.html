@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="travel guide that showcases top tourist destinations around the world.">
+    <meta name="author" content="Yerlin A. Rodriguez">
     <title>Travel Explorer - Your Guide to Top Tourist Destinations</title>
     <link rel="stylesheet" href="styles/travel-page.css">
-    <script src="scripts/main.js" defer></script>
+    
 </head>
 <body>
     <header>
         <nav>
+<img src="images/logo-removebg-preview.png" alt="logo">
+    <button class="burger-menu" aria-label="Toggle menu">
+        <span class="burger-menu__bar"></span>
+        <span class="burger-menu__bar"></span>
+        <span class="burger-menu__bar"></span>
+    </button>
+    
             <ul>
                 <li><a href="travel.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="travel-form.html">Explore</a></li>
                 <li><a href="favorites.html">Favorites</a></li>
             </ul>
-            <img src="images/logo-removebg-preview.png" alt="logo">
-            
         </nav>
     </header>
 
@@ -32,7 +39,8 @@
             <div class="container">
                 <h1>Start your journey today—explore, save, and travel the world with Travel Explorer! 🌍✈️</h1>
                 <form id="destination-form">
-                    <button type="submit" class="btn"><span>DESTINATIONS!</span></button>
+                    <button type="button" class="btn" id="goToDestinations"><span>DESTINATIONS!</span></button>
+
                 </form>
             </div>
         </section>
@@ -101,6 +109,7 @@
     <footer>
         <p>&copy; <span id="year"></span> | Yerlin A. Rodriguez | Last Modified: <span id="lastModified"></span></p>
     </footer>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
 

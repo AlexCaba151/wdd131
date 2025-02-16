@@ -1,5 +1,4 @@
 
-
 // Lazy loading for images
 const lazyLoadImages = () => {
     const images = document.querySelectorAll("img[data-src]")
@@ -97,3 +96,32 @@ document.addEventListener('DOMContentLoaded', function() {
   // Optional: Auto-play functionality
   setInterval(nextSlide, 5000); // Change slide every 5 seconds
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerMenu = document.querySelector('.burger-menu');
+  const navMenu = document.querySelector('nav ul');
+
+  burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    navMenu.classList.toggle('show');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('nav') && navMenu.classList.contains('show')) {
+      burgerMenu.classList.remove('active');
+      navMenu.classList.remove('show');
+    }
+  });
+
+  // Prevent clicks inside the menu from closing it
+  navMenu.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});
+
+
+document.getElementById("goToDestinations").addEventListener("click", function () {
+  window.location.href = "destinations.html";
+});
+
