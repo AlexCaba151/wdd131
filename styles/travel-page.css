@@ -55,7 +55,7 @@ nav ul {
 nav img {
   width: 60px;
   position: absolute;
-  left: 50%;
+  left: 95%;
   bottom: 5%;
   transform: translateX(-50%);
 }
